@@ -1,60 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8" />
-  <title>Canopy Prototype - Red Squad</title>
-  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <title>Firm Calendar Prototype</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50">
-  <div id="root"></div>
-  <script type="text/babel">
-    // We get these from the React global object because we are using CDNs
-    const { useState, useEffect, useMemo } = React;
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState, useMemo, useEffect } = React;
 
-    /* ═══════════════════════════════════════════════════════════════════════════
-       DATA & UTILS (Keeping your Claude logic intact)
-       ═══════════════════════════════════════════════════════════════════════════ */
-    const FEDERAL_HOLIDAYS_BY_YEAR = {
-      2026: [
-        { date: "2026-01-01", label: "New Year's Day" }, { date: "2026-01-19", label: "Martin Luther King Jr. Day" },
-        { date: "2026-02-16", label: "Presidents' Day" }, { date: "2026-05-25", label: "Memorial Day" },
-        { date: "2026-06-19", label: "Juneteenth" }, { date: "2026-07-03", label: "Independence Day (Observed)" },
-        { date: "2026-07-04", label: "Independence Day" }, { date: "2026-09-07", label: "Labor Day" },
-        { date: "2026-10-12", label: "Columbus Day" }, { date: "2026-11-11", label: "Veterans Day" },
-        { date: "2026-11-26", label: "Thanksgiving Day" }, { date: "2026-12-25", label: "Christmas Day" },
-      ]
-    };
+        // PASTE THE ENTIRE BODY OF YOUR CLAUDE CODE HERE
+        // Just make sure the function is named FirmCalendar
+        function FirmCalendar() {
+            // ... all that logic you had before ...
+            return (
+                <div className="p-8">
+                    <h1 className="text-2xl font-bold mb-4">Firm Calendar Prototype</h1>
+                    <p className="text-gray-600">If you see this, the React logic is working!</p>
+                    {/* The rest of your UI code */}
+                </div>
+            );
+        }
 
-    // ... [Rest of your DATA arrays: TAX_DEADLINES, JEWISH_HOLIDAYS, etc.]
-    // (I'm skipping the full paste for brevity, but keep all your existing data here)
-
-    /* ═══════════════════════════════════════════════════════════════════════════
-       COMPONENTS (Toggle, SIcon, MiniCal, etc.)
-       ═══════════════════════════════════════════════════════════════════════════ */
-    function Toggle({ on, onChange, size="md" }) { 
-        /* your existing code */ 
-    }
-
-    // ... [Include all your sub-components here]
-
-    function FirmCalendar() {
-      // ... [The main logic of your component]
-      return (
-        <div className="p-4">
-           {/* Your existing UI layout */}
-           <h1 className="text-xl font-bold">Firm Calendar Prototype</h1>
-        </div>
-      );
-    }
-
-    /* ═══════════════════════════════════════════════════════════════════════════
-       RENDER CALL (The important part!)
-       ═══════════════════════════════════════════════════════════════════════════ */
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<FirmCalendar />); 
-  </script>
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<FirmCalendar />);
+    </script>
 </body>
 </html>
