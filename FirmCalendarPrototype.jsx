@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Canopy Prototype - Red Squad</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <div id="root"></div>
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+    // --- YOUR CLAUDE CODE STARTS HERE ---
+
 import { useState, useMemo } from "react";
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -571,3 +587,13 @@ export default function FirmCalendar() {
     </div>
   );
 }
+
+// --- YOUR CLAUDE CODE ENDS HERE ---
+
+    // This part actually renders the component into the page
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    // Replace 'YourComponentName' with whatever Claude named your main component (e.g., App)
+    root.render(<App />); 
+  </script>
+</body>
+</html>
