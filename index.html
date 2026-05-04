@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>V2 Firm Calendar Prototype - Jason Mitchell</title>
+  <title>V2 Gemini - Firm Calendar Prototype - Red Squad</title>
   
   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
@@ -15,14 +15,14 @@
   <div id="root"></div>
 
   <script type="text/babel">
-    // 1. Initialize Hooks and Icons from the global CDN objects (Replaces 'import' statements)
+    // 1. Initialize Hooks and Icons from the global CDN objects
     const { useState, useMemo, useEffect } = React;
     const {
       Building2, Users, CreditCard, Calendar, Palette, List, FileText,
       FlaskConical, Shield, Tag, LayoutGrid, User, Mail, Settings,
       Bell, Inbox, FolderOpen, CheckSquare, Clock, BarChart3, Pencil,
       ChevronLeft, ChevronRight, X, Plus
-    } = lucideReact;
+    } = window.lucideReact;
 
     /* ══════════ DATA ══════════ */
 
@@ -768,7 +768,7 @@
       );
     }
 
-    // 2. Render the app using the exact same function name
+    // 2. Render the app
     const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(<FirmCalendar />); 
 
